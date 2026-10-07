@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Enums\RequestStatus;
+use App\Models\Bmn\BmnItem;
 use App\Models\Bmn\BmnSubmission;
 use App\Models\Bmn\ResidencePermit;
 use App\Models\Core\Employee;
@@ -109,6 +110,21 @@ class AuthorizationTest extends TestCase
         $this->assertFalse($adminTeknika->can('view', $submissionNautika));
     }
 
+    public function test_unit_admin_can_only_view_own_unit_bmn_items(): void
+    {
+        $adminTeknika = Employee::where('email', 'admin.teknika@stipjakarta.ac.id')->first();
+        $this->assertNotNull($adminTeknika);
+
+        $prodiTeknika = Unit::where('code', 'PRODI-TEK')->first();
+        $prodiNautika = Unit::where('code', 'PRODI-NAU')->first();
+
+        $itemTeknika = new BmnItem(['unit_id' => $prodiTeknika->id]);
+        $itemNautika = new BmnItem(['unit_id' => $prodiNautika->id]);
+
+        $this->assertTrue($adminTeknika->can('view', $itemTeknika));
+        $this->assertFalse($adminTeknika->can('view', $itemNautika));
+    }
+
     public function test_circulation_returned_is_locked_from_updates(): void
     {
         $petugasPerpus = Employee::where('email', 'petugas.perpus@stipjakarta.ac.id')->first();
@@ -123,5 +139,16 @@ class AuthorizationTest extends TestCase
         // Transaksi returned terkunci permanen sesuai PRD §6.3
         $this->assertFalse($petugasPerpus->can('update', $returnedCirculation));
         $this->assertFalse($petugasPerpus->can('delete', $returnedCirculation));
+    }
+
+    public function test_teacher_cannot_manage_bmn_or_process_submissions(): void
+    {
+        $dosen = Employee::where('email', 'dosen.teknika@stipjakarta.ac.id')->first();
+        $this->assertNotNull($dosen);
+
+        $this->assertTrue($dosen->hasRole('teacher'));
+        $this->assertFalse($dosen->can('bmn.submission.create'));
+        $this->assertFalse($dosen->can('bmn.submission.process'));
+        $this->assertFalse($dosen->can('residence.permit.approve'));
     }
 }
