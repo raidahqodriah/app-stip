@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Core\Employee;
+use App\Models\Core\Student;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +22,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Relation::morphMap([
+            'employee' => Employee::class,
+            'student' => Student::class,
+        ]);
     }
 }
