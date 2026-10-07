@@ -34,11 +34,24 @@ class ResidencePermitResource extends Resource
 
     protected static ?string $cluster = BmnCluster::class;
 
-    protected static ?string $navigationLabel = 'Surat Izin Rumah Dinas (SIP)';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedIdentification;
 
     protected static ?int $navigationSort = 5;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.residence_permits.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.residence_permits.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.residence_permits.navigation_label');
+    }
 
     protected static ?string $recordTitleAttribute = 'permit_number';
 

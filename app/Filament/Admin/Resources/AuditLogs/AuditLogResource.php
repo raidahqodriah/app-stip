@@ -24,11 +24,24 @@ class AuditLogResource extends Resource
 
     protected static ?string $cluster = MasterCluster::class;
 
-    protected static ?string $navigationLabel = 'Log Audit';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedShieldCheck;
 
     protected static ?int $navigationSort = 6;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.audit_logs.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.audit_logs.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.audit_logs.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

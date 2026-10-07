@@ -2,7 +2,9 @@
 
 namespace App\Enums;
 
-enum RoomType: string
+use Filament\Support\Contracts\HasLabel;
+
+enum RoomType: string implements HasLabel
 {
     case Lab = 'lab';
     case Classroom = 'classroom';
@@ -10,14 +12,19 @@ enum RoomType: string
     case Warehouse = 'warehouse';
     case Other = 'other';
 
-    public function label(): string
+    public function getLabel(): ?string
     {
         return match ($this) {
-            self::Lab => 'Laboratorium / Simulator',
-            self::Classroom => 'Ruang Kelas',
-            self::Office => 'Ruang Kantor',
-            self::Warehouse => 'Gudang',
-            self::Other => 'Lainnya',
+            self::Lab => __('enums.room_type.lab'),
+            self::Classroom => __('enums.room_type.classroom'),
+            self::Office => __('enums.room_type.office'),
+            self::Warehouse => __('enums.room_type.warehouse'),
+            self::Other => __('enums.room_type.other'),
         };
+    }
+
+    public function label(): string
+    {
+        return $this->getLabel() ?? $this->value;
     }
 }

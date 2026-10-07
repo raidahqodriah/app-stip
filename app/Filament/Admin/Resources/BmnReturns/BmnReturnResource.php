@@ -36,13 +36,26 @@ class BmnReturnResource extends Resource
 
     protected static ?string $cluster = BmnCluster::class;
 
-    protected static ?string $navigationLabel = 'Pengembalian BMN';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedArrowUturnLeft;
 
     protected static ?int $navigationSort = 3;
 
     protected static ?string $recordTitleAttribute = 'reason';
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.bmn_returns.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.bmn_returns.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.bmn_returns.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

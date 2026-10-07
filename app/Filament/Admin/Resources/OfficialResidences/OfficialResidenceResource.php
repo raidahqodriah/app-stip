@@ -27,11 +27,24 @@ class OfficialResidenceResource extends Resource
 
     protected static ?string $cluster = BmnCluster::class;
 
-    protected static ?string $navigationLabel = 'Rumah Dinas';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedHomeModern;
 
     protected static ?int $navigationSort = 4;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.official_residences.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.official_residences.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.official_residences.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

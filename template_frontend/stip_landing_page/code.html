@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#002020", "on-secondary-fixed-variant": "#004f50", "secondary-fixed": "#8ff3f2", "inverse-surface": "#213145", "tertiary-fixed": "#ffdea8", "tertiary-container": "#382600", "background": "#f8f9ff", "status-inoperative": "#DC2626", "on-surface-variant": "#43474e", "tertiary-fixed-dim": "#fabc3e", "status-libur": "#64748B", "navy-light": "#1B416B", "on-primary-container": "#7892b7", "primary-container": "#0b2a4a", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#5e4200", "on-error-container": "#93000a", "status-inoperative-bg": "#FEF2F2", "surface-container-low": "#eff4ff", "status-terisi-bg": "#E7ECF1", "secondary-container": "#8ff3f2", "outline-variant": "#c4c6cf", "on-tertiary": "#ffffff", "surface-container-high": "#dce9ff", "surface": "#f8f9ff", "on-primary": "#ffffff", "primary": "#00152d", "on-secondary-container": "#007070", "surface-variant": "#d3e4fe", "outline": "#74777f", "status-tersedia": "#0E8A8A", "on-surface": "#0b1c30", "on-primary-fixed": "#001c38", "secondary-fixed-dim": "#72d6d6", "surface-tint": "#466083", "on-tertiary-container": "#bc8700", "canvas-bg": "#F6F8FB", "status-libur-bg": "#F1F5F9", "error-container": "#ffdad6", "on-error": "#ffffff", "inverse-on-surface": "#eaf1ff", "gold-hover": "#C9911C", "status-tersedia-bg": "#E6F4F4", "text-muted": "#64748B", "on-secondary": "#ffffff", "on-background": "#0b1c30", "gold-subtle": "#FEF9EE", "surface-bright": "#f8f9ff", "on-tertiary-fixed": "#271900", "surface-dim": "#cbdbf5", "surface-container": "#e5eeff", "primary-fixed": "#d3e4ff", "border-subtle": "#E2E8F0", "inverse-primary": "#aec8f0", "surface-container-lowest": "#ffffff", "text-primary": "#0F172A", "primary-fixed-dim": "#aec8f0", "on-primary-fixed-variant": "#2d486a", "secondary": "#006a6a", "tertiary": "#1e1300", "surface-white": "#FFFFFF", "surface-container-highest": "#d3e4fe", "status-terisi": "#0B2A4A" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "gutter": "1.5rem", "space-xl": "2rem", "space-3xl": "4rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-2xl": "3rem", "margin-mobile": "1rem", "margin": "2rem", "space-md": "1rem" }, "fontFamily": { "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "code-badge": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600" }], "code-badge": ["12px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "800" }], "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-hero-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-white/95 backdrop-blur-md shadow-[0_1px_8px_rgba(11,42,74,0.06)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Logo STIP Jakarta" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WKJ7fBs2JmMjPqLdlD2nX41TZH0Wp8N4fBcbYI7nWYyUkgDCLeTyIkdJrzL9dejgU54xfmtZZ6tsRZa__Qw5Mjn_3PVDtSybqLJfP0mLpqaxk3x-kfGJtnjKVRbjFG4KjHLIjxvLOPmKi7fvzN5thjnw4qA07oWCdrH4pB2A438-Njg2S7aqHx4Z0S6xIQ7jzK2AFUjSMDKN-52-00EFC51p1kXXA1si5WyLEytqINcw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">SILT-STIP</span><span class="font-body-sm text-body-sm text-text-muted hidden sm:inline-block">Sistem Informasi Layanan Terpadu - STIP Jakarta</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-1 bg-canvas-bg rounded-lg" data-active-classes="bg-surface-container text-primary font-title-md"><a aria-current="page" class="px-space-md py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-title-md" data-path="beranda" href="#">Beranda</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="katalog-lab" href="#">Lab</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="jadwal-lab" href="#">Jadwal</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="pengumuman" href="#">Pengumuman</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center h-10 px-space-md rounded-lg font-label-md text-label-md text-status-terisi hover:bg-status-libur-bg transition-colors" data-path="login-pegawai" href="#">Masuk Pegawai</a><a class="inline-flex items-center justify-center h-10 px-space-lg rounded-lg bg-status-terisi text-on-primary font-label-md text-label-md hover:bg-navy-light transition-colors" data-path="login-taruna" href="#">Masuk Taruna</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-canvas-bg min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Water-Pattern Background Strip (Maritime Tone) -->
+<div class="w-full relative overflow-hidden bg-canvas-bg">
+<!-- Subtle Marine Radial Glow (No Borders) -->
+<div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-surface-container-high/40 blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 left-10 w-80 h-80 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+<!-- 1. Hero Section -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-3xl relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Hero Left Column: Editorial & Call to Actions -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high/60 w-fit">
+<span class="w-2 h-2 rounded-full bg-status-tersedia"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase">Sistem Terpadu STIP Jakarta v2.4</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight leading-tight">
+              Satu Aplikasi untuk Seluruh Layanan Kampus STIP Jakarta
+            </h1>
+<p class="font-body-lg text-body-lg text-text-muted max-w-2xl">
+              Booking lab dan simulator, pengelolaan BMN, surat izin rumah dinas, dan perpustakaan dalam satu akun, tanpa bentrok, dan terdokumentasi.
+            </p>
+</div>
+<!-- Hero Action CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<!-- Primary Warm Gold Button -->
+<a class="inline-flex items-center justify-center gap-space-xs h-12 px-space-xl rounded-xl bg-tertiary-fixed-dim hover:bg-gold-hover text-primary font-title-md text-title-md font-bold shadow-md hover:shadow-lg transition-all duration-200" data-path="jadwal-lab" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+<span>Lihat Jadwal Lab</span>
+</a>
+<!-- Outline Navy Button (Border-free style through soft elevation & dark contrasting tone) -->
+<a class="inline-flex items-center justify-center gap-space-xs h-12 px-space-xl rounded-xl bg-surface-white hover:bg-surface-container text-primary font-title-md text-title-md font-semibold shadow-sm hover:shadow-md transition-all duration-200" data-path="katalog-lab" href="#">
+<span class="material-symbols-outlined text-[20px]">travel_explore</span>
+<span>Jelajahi Lab</span>
+</a>
+</div>
+<!-- Operational Live Tagline -->
+<div class="flex items-center gap-space-sm text-text-muted font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-status-tersedia text-[18px]">verified</span>
+<span>Sinkronisasi otomatis dengan Kalender Akademik Semester Genap 2025/2026</span>
+</div>
+</div>
+<!-- Hero Right Column: Interactive Maritime Schedule Card Preview -->
+<div class="lg:col-span-5 relative">
+<!-- Ambient decorative card backing -->
+<div class="w-full bg-surface-white rounded-xl shadow-xl p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<!-- Header bar with live clock indicator -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-white text-[20px]">grid_view</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Operasional Simulator</span>
+<span class="font-body-sm text-body-sm text-text-muted">Minggu Ke-8 • Live Monitoring</span>
+</div>
+</div>
+<div class="px-space-sm py-1 rounded-full bg-status-tersedia-bg text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>Aktif 07.30 - 16.00</span>
+</div>
+</div>
+<!-- Mini Calendar View Matrix (No personal borrower names - strict privacy) -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs">
+<!-- Calendar Column Header -->
+<div class="grid grid-cols-5 text-center font-label-sm text-label-sm text-text-muted py-1">
+<span>SEN</span>
+<span>SEL</span>
+<span>RAB</span>
+<span>KAM</span>
+<span>JUM</span>
+</div>
+<!-- Interactive Simulated Schedule Timeline -->
+<div class="grid grid-cols-5 gap-1.5 text-center">
+<!-- Senin -->
+<div class="flex flex-col gap-1.5">
+<div class="p-2 rounded bg-status-terisi text-on-primary font-label-sm text-label-sm shadow-sm flex flex-col items-center">
+<span class="font-bold">ERCS</span>
+<span class="opacity-80 text-[10px]">08.00-11.00</span>
+<span class="mt-1 px-1.5 py-0.5 rounded bg-surface-white/20 text-[9px] uppercase">Terisi</span>
+</div>
+<div class="p-2 rounded bg-status-tersedia-bg text-secondary font-label-sm text-label-sm shadow-sm flex flex-col items-center">
+<span class="font-bold">CHL</span>
+<span class="opacity-80 text-[10px]">11.30-13.30</span>
+<span class="mt-1 px-1.5 py-0.5 rounded bg-secondary/15 text-[9px] uppercase font-bold">Tersedia</span>
+</div>
+</div>
+<!-- Selasa -->
+<div class="flex flex-col gap-1.5">
+<div class="p-2 rounded bg-status-tersedia-bg text-secondary font-label-sm text-label-sm shadow-sm flex flex-col items-center">
+<span class="font-bold">MEL</span>
+<span class="opacity-80 text-[10px]">08.00-10.30</span>
+<span class="mt-1 px-1.5 py-0.5 rounded bg-secondary/15 text-[9px] uppercase font-bold">Tersedia</span>
+</div>
+<div class="p-2 rounded bg-status-terisi text-on-primary font-label-sm text-label-sm shadow-sm flex flex-col items-center">
+<span class="font-bold">EEL</span>
+<span class="opacity-80 text-[10px]">10.30-14.00</span>
+<span class="mt-1 px-1.5 py-0.5 rounded bg-surface-white/20 text-[9px] uppercase">Terisi</span>
+</div>
+</div>
+<!-- Rabu -->
+<div class="flex flex-col gap-1.5">
+<div class="p-2 rounded bg-status-libur-bg text-status-libur font-label-sm text-label-sm shadow-sm flex flex-col items-center justify-center min-h-[96px]">
+<span class="material-symbols-outlined text-[18px]">event_busy</span>
+<span class="font-bold text-[11px] mt-1">Pemeliharaan</span>
+<span class="text-[9px]">Sistem AC</span>
+</div>
+</div>
+<!-- Kamis -->
+<div class="flex flex-col gap-1.5">
+<div class="p-2 rounded bg-status-terisi text-on-primary font-label-sm text-label-sm shadow-sm flex flex-col items-center">
+<span class="font-bold">CBT</span>
+<span class="opacity-80 text-[10px]">08.00-12.00</span>
+<span class="mt-1 px-1.5 py-0.5 rounded bg-surface-white/20 text-[9px] uppercase">Terisi</span>
+</div>
+<div class="p-2 rounded bg-status-tersedia-bg text-secondary font-label-sm text-label-sm shadow-sm flex flex-col items-center">
+<span class="font-bold">EWS</span>
+<span class="opacity-80 text-[10px]">13.00-15.30</span>
+<span class="mt-1 px-1.5 py-0.5 rounded bg-secondary/15 text-[9px] uppercase font-bold">Tersedia</span>
+</div>
+</div>
+<!-- Jumat -->
+<div class="flex flex-col gap-1.5">
+<div class="p-2 rounded bg-status-tersedia-bg text-secondary font-label-sm text-label-sm shadow-sm flex flex-col items-center">
+<span class="font-bold">LTL</span>
+<span class="opacity-80 text-[10px]">08.00-11.30</span>
+<span class="mt-1 px-1.5 py-0.5 rounded bg-secondary/15 text-[9px] uppercase font-bold">Tersedia</span>
+</div>
+<div class="p-2 rounded bg-status-libur-bg text-text-muted font-label-sm text-label-sm shadow-sm flex flex-col items-center">
+<span class="font-bold">ACSL</span>
+<span class="opacity-80 text-[10px]">13.30-15.30</span>
+<span class="mt-1 px-1.5 py-0.5 rounded bg-text-muted/20 text-[9px] uppercase">Review</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Legend strip -->
+<div class="flex items-center justify-between text-body-sm text-text-muted pt-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-tersedia"></span>
+<span>Tersedia</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-terisi"></span>
+<span>Terisi (Anonim)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-libur"></span>
+<span>Maintenance / Libur</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 2. Trust Strip -->
+<section class="w-full bg-surface-white shadow-[0_1px_3px_rgba(11,42,74,0.04)] py-space-lg">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+<!-- Trust Item 1 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-canvas-bg/80">
+<div class="w-12 h-12 rounded-xl bg-status-tersedia-bg text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">event_available</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">0 Booking Bentrok</span>
+<span class="font-body-sm text-body-sm text-text-muted">Validasi jadwal otomatis anti tumpang tindih waktu</span>
+</div>
+</div>
+<!-- Trust Item 2 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-canvas-bg/80">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Verifikasi 2 Tahap</span>
+<span class="font-body-sm text-body-sm text-text-muted">Pemeriksaan teknisi dan approval kepala unit kerja</span>
+</div>
+</div>
+<!-- Trust Item 3 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-canvas-bg/80">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/60 text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">print</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Dokumen Cetak Otomatis</span>
+<span class="font-body-sm text-body-sm text-text-muted">Form izin berkode QR siap pakai untuk pos piket</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Four Integrated Service Cards (Grid) -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-3xl w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Ekosistem Kampus</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Layanan Terpadu STIP Jakarta</h2>
+</div>
+<p class="font-body-md text-body-md text-text-muted max-w-md">
+        Portal tunggal penghubung operasional laboratorium vokasi, logistik fasilitas, dan administrasi kedinasan maritim.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: Active Main Service (Lab & Simulator) -->
+<a class="group bg-surface-white rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden" data-path="katalog-lab" href="#">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary-fixed/30 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-status-tersedia text-on-primary font-label-sm text-label-sm">Layanan Utama</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs group-hover:text-secondary transition-colors">Lab &amp; Simulator SPP</h3>
+<p class="font-body-md text-body-md text-text-muted mb-space-lg">
+            Akses peminjaman simulator pelayaran IMO model, ruang bengkel teknik, komputer, dan sertifikasi taruna.
+          </p>
+</div>
+<div class="flex items-center justify-between text-secondary font-title-md text-title-md pt-space-sm">
+<span>Buka Peminjaman</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Card 2: Pengelolaan BMN -->
+<div class="bg-surface-white rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">inventory_2</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Tersedia setelah masuk</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Pengelolaan BMN</h3>
+<p class="font-body-md text-body-md text-text-muted mb-space-lg">
+            Pencatatan, peminjaman inventaris perlengkapan dinas, serta pelaporan inventarisasi Barang Milik Negara.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-text-muted font-body-sm text-body-sm pt-space-sm">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Khusus Pegawai &amp; Tim Logistik</span>
+</div>
+</div>
+<!-- Card 3: Izin Rumah Dinas -->
+<div class="bg-surface-white rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">home_work</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Tersedia setelah masuk</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Izin Rumah Dinas</h3>
+<p class="font-body-md text-body-md text-text-muted mb-space-lg">
+            Pengajuan berkas permohonan hunian dinas, pemeliharaan sarana perumahan, dan perpanjangan izin hunian.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-text-muted font-body-sm text-body-sm pt-space-sm">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Akses Portal Pegawai</span>
+</div>
+</div>
+<!-- Card 4: Layanan Perpustakaan -->
+<div class="bg-surface-white rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Tersedia setelah masuk</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Layanan Perpustakaan</h3>
+<p class="font-body-md text-body-md text-text-muted mb-space-lg">
+            Peminjaman modul kemaritiman, repositori karya ilmiah pelayaran, dan pemesanan ruang diskusi digital.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-text-muted font-body-sm text-body-sm pt-space-sm">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Taruna &amp; Dosen</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Ketersediaan Lab Hari Ini (Compact Grid of 8 Labs) -->
+<section class="w-full bg-surface-white py-space-3xl shadow-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<!-- Section Header with Direct Schedule Link -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Status Waktu Nyata</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Ketersediaan Lab Hari Ini</h2>
+</div>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-title-md text-title-md transition-colors w-fit" data-path="jadwal-lab" href="#">
+<span>Buka Jadwal Lengkap</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- 8 Labs Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Lab 1: CHL -->
+<div class="bg-canvas-bg rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-code-badge text-code-badge bg-primary text-on-primary px-2 py-0.5 rounded w-fit">CHL</span>
+<span class="font-title-md text-title-md text-primary mt-1 font-bold">Cargo Handling Lab</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-tersedia-bg text-secondary font-label-sm text-label-sm font-semibold">Tersedia</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-space-xs bg-surface-white/60 p-2 rounded-lg">
+<span class="text-text-muted">Slot kosong:</span>
+<span class="font-bold text-primary">Pukul 13.00 WIB</span>
+</div>
+</div>
+<!-- Lab 2: EEL -->
+<div class="bg-canvas-bg rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-code-badge text-code-badge bg-primary text-on-primary px-2 py-0.5 rounded w-fit">EEL</span>
+<span class="font-title-md text-title-md text-primary mt-1 font-bold">Electric &amp; Electronic Lab</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-terisi-bg text-status-terisi font-label-sm text-label-sm font-semibold">Terisi</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-space-xs bg-surface-white/60 p-2 rounded-lg">
+<span class="text-text-muted">Slot kosong:</span>
+<span class="font-bold text-primary">Pukul 15.30 WIB</span>
+</div>
+</div>
+<!-- Lab 3: EWS -->
+<div class="bg-canvas-bg rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-code-badge text-code-badge bg-primary text-on-primary px-2 py-0.5 rounded w-fit">EWS</span>
+<span class="font-title-md text-title-md text-primary mt-1 font-bold">Engineering Workshop</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-tersedia-bg text-secondary font-label-sm text-label-sm font-semibold">Tersedia</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-space-xs bg-surface-white/60 p-2 rounded-lg">
+<span class="text-text-muted">Slot kosong:</span>
+<span class="font-bold text-primary">Pukul 09.00 WIB</span>
+</div>
+</div>
+<!-- Lab 4: MEL -->
+<div class="bg-canvas-bg rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-code-badge text-code-badge bg-primary text-on-primary px-2 py-0.5 rounded w-fit">MEL</span>
+<span class="font-title-md text-title-md text-primary mt-1 font-bold">Marine Engineering Lab</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-terisi-bg text-status-terisi font-label-sm text-label-sm font-semibold">Terisi</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-space-xs bg-surface-white/60 p-2 rounded-lg">
+<span class="text-text-muted">Slot kosong:</span>
+<span class="font-bold text-primary">Pukul 14.00 WIB</span>
+</div>
+</div>
+<!-- Lab 5: CBT -->
+<div class="bg-canvas-bg rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-code-badge text-code-badge bg-primary text-on-primary px-2 py-0.5 rounded w-fit">CBT</span>
+<span class="font-title-md text-title-md text-primary mt-1 font-bold">Computer Based Training</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-tersedia-bg text-secondary font-label-sm text-label-sm font-semibold">Tersedia</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-space-xs bg-surface-white/60 p-2 rounded-lg">
+<span class="text-text-muted">Slot kosong:</span>
+<span class="font-bold text-primary">Pukul 10.30 WIB</span>
+</div>
+</div>
+<!-- Lab 6: ERCS -->
+<div class="bg-canvas-bg rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-code-badge text-code-badge bg-primary text-on-primary px-2 py-0.5 rounded w-fit">ERCS</span>
+<span class="font-title-md text-title-md text-primary mt-1 font-bold">Engine Room Simulator</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-terisi-bg text-status-terisi font-label-sm text-label-sm font-semibold">Terisi</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-space-xs bg-surface-white/60 p-2 rounded-lg">
+<span class="text-text-muted">Slot kosong:</span>
+<span class="font-bold text-primary">Pukul 15.00 WIB</span>
+</div>
+</div>
+<!-- Lab 7: LTL -->
+<div class="bg-canvas-bg rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-code-badge text-code-badge bg-primary text-on-primary px-2 py-0.5 rounded w-fit">LTL</span>
+<span class="font-title-md text-title-md text-primary mt-1 font-bold">Language Training Lab</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-tersedia-bg text-secondary font-label-sm text-label-sm font-semibold">Tersedia</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-space-xs bg-surface-white/60 p-2 rounded-lg">
+<span class="text-text-muted">Slot kosong:</span>
+<span class="font-bold text-primary">Pukul 11.00 WIB</span>
+</div>
+</div>
+<!-- Lab 8: ACSL -->
+<div class="bg-canvas-bg rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-code-badge text-code-badge bg-primary text-on-primary px-2 py-0.5 rounded w-fit">ACSL</span>
+<span class="font-title-md text-title-md text-primary mt-1 font-bold">Automatic Control System</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-inoperative-bg text-status-inoperative font-label-sm text-label-sm font-semibold">Tidak Operasional</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-space-xs bg-surface-white/60 p-2 rounded-lg">
+<span class="text-text-muted">Keterangan:</span>
+<span class="font-bold text-status-inoperative">Pemeliharaan</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Break / Campus Atmosphere Image Mosaic -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-2xl w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Fasilitas Standar IMO STCW</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">Pelatihan Kemaritiman Berstandar Internasional</h3>
+<p class="font-body-md text-body-md text-text-muted">
+          Laboratorium dan simulator pelayaran di STIP Jakarta dikalibrasi berkala untuk memastikan taruna dan perwira siswa memenuhi standar kompetensi maritim global.
+        </p>
+<div class="flex items-center gap-space-xl pt-space-xs">
+<div class="flex flex-col">
+<span class="font-display-hero text-display-hero text-primary">24+</span>
+<span class="font-body-sm text-body-sm text-text-muted">Unit Lab Aktif</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-hero text-display-hero text-primary">100%</span>
+<span class="font-body-sm text-body-sm text-text-muted">Tersertifikasi BPSDMP</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 grid grid-cols-2 gap-space-md">
+<div class="overflow-hidden rounded-xl shadow-md h-56">
+<img class="w-full h-full object-cover" data-alt="High tech modern maritime full mission ship bridge simulator at STIP Jakarta with realistic sea projection and electronic navigation consoles in deep oceanic navy lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4hsZ1SctbaDu2VP3q8FgyuGQjeOZDdX5BiXYJahhUQOtamVjgpmOqqUyRls1PNeEV0NcIRxKDYZMbT8eJsTTcz5N2xdZwZjxlupWD3F-d0650vaRzBo5LKog-6ju7ywqAvAYCrGFtmcG2ckT1qClqepkFytLAZuDgqaTEdluGbAaHGawtosQM9devA9ohogbz8dXHTfzx8nGfkQfOACc1MVZBFFjNiWgn6KtlyNad"/>
+</div>
+<div class="overflow-hidden rounded-xl shadow-md h-56">
+<img class="w-full h-full object-cover" data-alt="Cadets of Sekolah Tinggi Ilmu Pelayaran Jakarta wearing clean maritime uniforms operating complex machinery control panels in marine engineering workshop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcdn_OFk-PuO7piucwuJ5qwfVjztC7ZiTdKt3iqaX4EMHz3YsPafR6spf3TFs-iumzwOxVV2l9gpNcaD91zkjp688Bfnyf3kQ02mAD4IyOZloVaYwODtHFsecc4rfw8My6onuaP1fvcPXdKROO3SlRK_usqn8NtCvdSWmpmkPazbNhGMYgRVM3GWglDfpQEqtFvTQU88qDhN4iUFT8JqENfmKxupQ9JIKosbk7Xy-X"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Cara Kerja Booking Lab (5-Step Visual Stepper) -->
+<section class="w-full bg-surface-white py-space-3xl shadow-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Prosedur Resmi</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Cara Kerja Booking Lab</h2>
+<p class="font-body-md text-body-md text-text-muted mt-space-xs">
+          Alur terstruktur dan transparan demi mencegah jadwal bentrok serta menjamin kesiapan sarana praktikum.
+        </p>
+</div>
+<!-- Stepper Component -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center p-space-md rounded-xl bg-canvas-bg relative">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center mb-space-sm shadow-md">
+            1
+          </div>
+<span class="font-title-md text-title-md text-primary font-bold">Ajukan</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-1">
+            Pilih lab, tanggal, dan slot jam kosong di kalender sistem.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center p-space-md rounded-xl bg-canvas-bg relative">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center mb-space-sm shadow-md">
+            2
+          </div>
+<span class="font-title-md text-title-md text-primary font-bold">Diperiksa Petugas</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-1">
+            Teknisi lab memverifikasi kesiapan alat dan modul praktikum.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center p-space-md rounded-xl bg-canvas-bg relative">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center mb-space-sm shadow-md">
+            3
+          </div>
+<span class="font-title-md text-title-md text-primary font-bold">Disetujui Kepala Unit</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-1">
+            Persetujuan berjenjang pimpinan unit lab secara digital.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center p-space-md rounded-xl bg-canvas-bg relative">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed-dim text-primary font-headline-sm text-headline-sm flex items-center justify-center mb-space-sm shadow-md font-bold">
+            4
+          </div>
+<span class="font-title-md text-title-md text-primary font-bold">Konfirmasi Siap Cetak</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-1">
+            Surat izin peminjaman diterbitkan beserta barcode verifikasi.
+          </p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center p-space-md rounded-xl bg-canvas-bg relative">
+<div class="w-12 h-12 rounded-full bg-status-tersedia text-on-primary font-headline-sm text-headline-sm flex items-center justify-center mb-space-sm shadow-md font-bold">
+<span class="material-symbols-outlined text-[24px]">flag</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">Sesi Lab</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-1">
+            Tunjukkan surat izin di loket lab dan laksanakan sesi praktikum.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Pengumuman Terbaru -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-3xl w-full">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Informasi Terkini</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Pengumuman Terbaru</h2>
+</div>
+<a class="inline-flex items-center gap-space-xs text-secondary hover:text-on-secondary-fixed font-title-md text-title-md transition-colors w-fit" data-path="pengumuman" href="#">
+<span>Semua Pengumuman</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Pengumuman 1: Pemeliharaan Lab -->
+<div class="bg-surface-white rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-status-inoperative-bg text-status-inoperative font-label-sm text-label-sm font-semibold">Pemeliharaan Lab</span>
+<span class="font-body-sm text-body-sm text-text-muted">14 April 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Kalibrasi Rutin Sensor Automatic Control System (ACSL)</h3>
+<p class="font-body-md text-body-md text-text-muted line-clamp-2">
+            Unit ACSL sementara dialihkan untuk keperluan maintenance rutin tahunan tim pabrikan dan sertifikasi sensor pneumatik.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md flex flex-wrap gap-1">
+<span class="text-body-sm text-text-muted mr-1">Lab terkait:</span>
+<span class="font-code-badge text-code-badge bg-surface-container text-primary px-2 py-0.5 rounded">ACSL</span>
+</div>
+</div>
+<!-- Pengumuman 2: Libur Nasional -->
+<div class="bg-surface-white rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-status-libur-bg text-status-libur font-label-sm text-label-sm font-semibold">Libur Nasional</span>
+<span class="font-body-sm text-body-sm text-text-muted">10 April 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Penyesuaian Jam Operasional Libur Hari Raya</h3>
+<p class="font-body-md text-body-md text-text-muted line-clamp-2">
+            Seluruh layanan booking laboratorium mandiri taruna dinonaktifkan sementara dan dibuka kembali pada hari kerja berikutnya.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md flex flex-wrap gap-1">
+<span class="text-body-sm text-text-muted mr-1">Lab terkait:</span>
+<span class="font-code-badge text-code-badge bg-surface-container text-primary px-2 py-0.5 rounded">Semua Lab</span>
+</div>
+</div>
+<!-- Pengumuman 3: Jadwal UKP -->
+<div class="bg-surface-white rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-status-tersedia-bg text-secondary font-label-sm text-label-sm font-semibold">Jadwal UKP</span>
+<span class="font-body-sm text-body-sm text-text-muted">05 April 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Prioritas Ruang CBT untuk Ujian Keahlian Pelaut (UKP)</h3>
+<p class="font-body-md text-body-md text-text-muted line-clamp-2">
+            Laboratorium CBT diprioritaskan bagi agenda UKP Pra-Prala dan Pasca Prala. Peminjaman kelompok studi dibuka setelah pukul 16.00 WIB.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md flex flex-wrap gap-1">
+<span class="text-body-sm text-text-muted mr-1">Lab terkait:</span>
+<span class="font-code-badge text-code-badge bg-surface-container text-primary px-2 py-0.5 rounded">CBT</span>
+<span class="font-code-badge text-code-badge bg-surface-container text-primary px-2 py-0.5 rounded">LTL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Login Band (Dual Portal Cards) -->
+<section class="w-full bg-canvas-bg py-space-3xl mb-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="bg-primary rounded-2xl p-space-xl md:p-space-2xl text-on-primary shadow-xl relative overflow-hidden">
+<!-- Subtle Oceanic Motif Accent in background -->
+<div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-secondary/10 blur-2xl pointer-events-none"></div>
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest font-bold">Akses Autentikasi Kampus</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary mt-1">Pintu Masuk Terpadu SILT-STIP</h2>
+<p class="font-body-md text-body-md text-on-primary-container mt-space-xs">
+            Akun pegawai dan taruna terpisah sesuai wewenang SSO STIP Jakarta. Pilih portal sesuai status kedinasan Anda.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card Portal Pegawai -->
+<div class="bg-surface-white/10 backdrop-blur-md rounded-xl p-space-lg flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-white/20 text-on-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[26px]">badge</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-space-xs">Portal Pegawai</h3>
+<p class="font-body-md text-body-md text-on-primary-container mb-space-lg">
+                Masuk menggunakan NIP / Email dinas @dephub.go.id atau @stipjakarta.ac.id melalui Single Sign-On (SSO).
+              </p>
+</div>
+<a class="inline-flex items-center justify-center gap-space-xs h-12 rounded-xl bg-surface-white hover:bg-surface-container text-primary font-title-md text-title-md font-bold transition-colors w-full shadow-md" data-path="login-pegawai" href="#">
+<span class="material-symbols-outlined text-[20px]">login</span>
+<span>Masuk via SSO Pegawai</span>
+</a>
+</div>
+<!-- Card Portal Taruna -->
+<div class="bg-surface-white/10 backdrop-blur-md rounded-xl p-space-lg flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed-dim text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[26px]">school</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-space-xs">Portal Taruna</h3>
+<p class="font-body-md text-body-md text-on-primary-container mb-space-lg">
+                Akses taruna madya dan utama menggunakan Nomor Induk Taruna (NIT / NRP) yang terdaftar di Pusbangkar.
+              </p>
+</div>
+<a class="inline-flex items-center justify-center gap-space-xs h-12 rounded-xl bg-tertiary-fixed-dim hover:bg-gold-hover text-primary font-title-md text-title-md font-bold transition-colors w-full shadow-md" data-path="login-taruna" href="#">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<span>Masuk via Portal Taruna</span>
+</a>
+</div>
+</div>
+<!-- Privacy & Compliance Guarantee Footer -->
+<div class="mt-space-xl pt-space-md flex items-center justify-between flex-wrap gap-space-sm text-body-sm text-on-primary-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span>Kerahasiaan data peminjam terproteksi. Data publik hanya menampilkan status operasional ruang lab.</span>
+</div>
+<span>Bantuan Kendala Akun: ext. 142 (Unit TI STIP)</span>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-white mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter pb-space-xl"><div class="md:col-span-5 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-3 h-3 rounded-full bg-secondary"></div><span class="font-headline-sm text-headline-sm text-primary">SILT-STIP JAKARTA</span></div><p class="font-body-md text-body-md text-text-muted">Sistem Informasi Layanan Terpadu Sekolah Tinggi Ilmu Pelayaran (STIP) Jakarta. Pintu gerbang utama manajemen operasional laboratorium, simulator pelayaran, dan fasilitas akademis mariner tangguh Indonesia.</p><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-text-muted"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">location_on</span><span>Jl. Marunda Makmur, Cilincing, Jakarta Utara, DKI Jakarta 14150</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[18px]">mail</span><span>info@stipjakarta.ac.id</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[18px]">call</span><span>(021) 8899-0000 / Fax: (021) 8899-0001</span></div></div></div><div class="md:col-span-3 md:col-start-7 flex flex-col gap-space-md"><span class="font-title-md text-title-md text-primary font-bold">Layanan Laboratorium</span><div class="flex flex-col gap-space-sm"><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="katalog-lab" href="#">Katalog Lab &amp; Simulator</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="jadwal-lab" href="#">Jadwal Real-Time Lab</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="pengumuman" href="#">Pengumuman Perawatan</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="alur-peminjaman" href="#">Panduan Prosedur Booking</a></div></div><div class="md:col-span-3 flex flex-col gap-space-md"><span class="font-title-md text-title-md text-primary font-bold">Akses Pengguna</span><div class="flex flex-col gap-space-sm"><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="login-taruna" href="#">Portal Taruna</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="login-pegawai" href="#">Portal Pegawai &amp; Dosen</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="bantuan" href="#">Pusat Bantuan IT</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="standar-layanan" href="#">Maklumat &amp; SOP Layanan</a></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-text-muted text-center sm:text-left">© 2026 STIP Jakarta. Hak Cipta Dilindungi.</p><div class="flex items-center gap-space-lg"><span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Kementerian Perhubungan Republik Indonesia</span></div></div></div></footer></body></html>

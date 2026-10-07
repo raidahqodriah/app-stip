@@ -29,11 +29,24 @@ class RoomResource extends Resource
 
     protected static ?string $cluster = LabCluster::class;
 
-    protected static ?string $navigationLabel = 'Laboratorium & Ruangan';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingOffice;
 
     protected static ?int $navigationSort = 2;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.rooms.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.rooms.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.rooms.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

@@ -27,11 +27,24 @@ class DocumentTemplateResource extends Resource
 
     protected static ?string $cluster = MasterCluster::class;
 
-    protected static ?string $navigationLabel = 'Template Dokumen Cetak';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;
 
     protected static ?int $navigationSort = 4;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.document_templates.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.document_templates.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.document_templates.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

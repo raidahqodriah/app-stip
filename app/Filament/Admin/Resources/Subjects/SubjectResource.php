@@ -28,11 +28,24 @@ class SubjectResource extends Resource
 
     protected static ?string $cluster = LabCluster::class;
 
-    protected static ?string $navigationLabel = 'Mata Kuliah';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedAcademicCap;
 
     protected static ?int $navigationSort = 3;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.subjects.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.subjects.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.subjects.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

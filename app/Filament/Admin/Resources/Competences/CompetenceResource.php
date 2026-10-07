@@ -25,11 +25,24 @@ class CompetenceResource extends Resource
 
     protected static ?string $cluster = LabCluster::class;
 
-    protected static ?string $navigationLabel = 'Kompetensi IMO / STCW';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCheckBadge;
 
     protected static ?int $navigationSort = 4;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.competences.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.competences.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.competences.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

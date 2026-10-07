@@ -26,11 +26,24 @@ class BlackoutDateResource extends Resource
 
     protected static ?string $cluster = LabCluster::class;
 
-    protected static ?string $navigationLabel = 'Jadwal Libur & Blackout';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCalendarDateRange;
 
     protected static ?int $navigationSort = 7;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.blackout_dates.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.blackout_dates.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.blackout_dates.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

@@ -25,11 +25,24 @@ class SettingResource extends Resource
 
     protected static ?string $cluster = MasterCluster::class;
 
-    protected static ?string $navigationLabel = 'Pengaturan Sistem';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedAdjustmentsHorizontal;
 
     protected static ?int $navigationSort = 5;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.settings.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.settings.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.settings.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

@@ -1,37 +1,29 @@
 <?php
 
-use App\Enums\RequestStatus;
-use App\Models\Bmn\BmnItem;
-use App\Models\Core\Room;
-use App\Models\Lab\Booking;
-use App\Models\Library\Book;
+use App\Livewire\Front\AnnouncementIndex;
+use App\Livewire\Front\HomePage;
+use App\Livewire\Front\LabCatalog;
+use App\Livewire\Front\LabDetail;
+use App\Livewire\Front\LabSchedule;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    $rooms = Room::where('is_active', true)
-        ->orderBy('name')
-        ->get();
+/*
+|--------------------------------------------------------------------------
+| Web Routes - SILT-STIP Terpadu (Livewire 4 Frontend)
+|--------------------------------------------------------------------------
+*/
 
-    $recentBookings = Booking::with(['room', 'subject', 'requester'])
-        ->whereIn('status', [
-            RequestStatus::Approved,
-            RequestStatus::Completed,
-            RequestStatus::Submitted,
-        ])
-        ->latest('start_at')
-        ->limit(10)
-        ->get();
+Route::livewire('/', HomePage::class)->name('home');
+Route::livewire('/lab', LabCatalog::class)->name('lab.catalog');
+Route::livewire('/lab/{code}', LabDetail::class)->name('lab.detail');
+Route::livewire('/jadwal', LabSchedule::class)->name('lab.schedule');
+Route::livewire('/pengumuman', AnnouncementIndex::class)->name('announcements');
 
-    $stats = [
-        'rooms' => Room::count(),
-        'bookings' => Booking::count(),
-        'books' => Book::count(),
-        'bmn' => BmnItem::count(),
-    ];
+Route::get('/locale/{locale}', function (string $locale) {
+    if (in_array($locale, ['id', 'en'], true)) {
+        session(['locale' => $locale]);
+        cookie()->queue(cookie('app_locale', $locale, 60 * 24 * 365));
+    }
 
-    return view('welcome', compact('rooms', 'recentBookings', 'stats'));
-});
-
-Route::get('/jadwal', function () {
-    return redirect('/#jadwal');
-});
+    return redirect()->back();
+})->name('locale.switch');

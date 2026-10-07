@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             DocumentTemplateSeeder::class,
             UnitSeeder::class,
+            RoleAndPermissionSeeder::class,
             EmployeeSeeder::class,
             StudentSeeder::class,
             RoomSeeder::class,
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
             ResidenceSeeder::class,
             BookSeeder::class,
             BmnSeeder::class,
+            DashboardDemoSeeder::class,
         ]);
     }
 }

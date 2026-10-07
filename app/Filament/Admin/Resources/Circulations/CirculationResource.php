@@ -37,11 +37,24 @@ class CirculationResource extends Resource
 
     protected static ?string $cluster = LibraryCluster::class;
 
-    protected static ?string $navigationLabel = 'Sirkulasi & Denda';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedArrowsRightLeft;
 
     protected static ?int $navigationSort = 2;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.circulations.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.circulations.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.circulations.navigation_label');
+    }
 
     protected static ?string $recordTitleAttribute = 'transaction_code';
 

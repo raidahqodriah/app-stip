@@ -2,18 +2,25 @@
 
 namespace App\Enums;
 
-enum SubjectCategory: string
+use Filament\Support\Contracts\HasLabel;
+
+enum SubjectCategory: string implements HasLabel
 {
     case Teknika = 'teknika';
     case Nautika = 'nautika';
     case Kalk = 'kalk';
 
-    public function label(): string
+    public function getLabel(): ?string
     {
         return match ($this) {
-            self::Teknika => 'Teknika',
-            self::Nautika => 'Nautika',
-            self::Kalk => 'KALK',
+            self::Teknika => __('enums.subject_category.teknika'),
+            self::Nautika => __('enums.subject_category.nautika'),
+            self::Kalk => __('enums.subject_category.kalk'),
         };
+    }
+
+    public function label(): string
+    {
+        return $this->getLabel() ?? $this->value;
     }
 }

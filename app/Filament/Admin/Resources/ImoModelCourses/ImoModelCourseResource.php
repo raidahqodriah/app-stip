@@ -24,11 +24,24 @@ class ImoModelCourseResource extends Resource
 
     protected static ?string $cluster = LabCluster::class;
 
-    protected static ?string $navigationLabel = 'IMO Model Courses';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedGlobeAmericas;
 
     protected static ?int $navigationSort = 5;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.imo_model_courses.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.imo_model_courses.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.imo_model_courses.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

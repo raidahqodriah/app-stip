@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#002020", "on-secondary-fixed-variant": "#004f50", "secondary-fixed": "#8ff3f2", "inverse-surface": "#213145", "tertiary-fixed": "#ffdea8", "tertiary-container": "#382600", "background": "#f8f9ff", "status-inoperative": "#DC2626", "on-surface-variant": "#43474e", "tertiary-fixed-dim": "#fabc3e", "status-libur": "#64748B", "navy-light": "#1B416B", "on-primary-container": "#7892b7", "primary-container": "#0b2a4a", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#5e4200", "on-error-container": "#93000a", "status-inoperative-bg": "#FEF2F2", "surface-container-low": "#eff4ff", "status-terisi-bg": "#E7ECF1", "secondary-container": "#8ff3f2", "outline-variant": "#c4c6cf", "on-tertiary": "#ffffff", "surface-container-high": "#dce9ff", "surface": "#f8f9ff", "on-primary": "#ffffff", "primary": "#00152d", "on-secondary-container": "#007070", "surface-variant": "#d3e4fe", "outline": "#74777f", "status-tersedia": "#0E8A8A", "on-surface": "#0b1c30", "on-primary-fixed": "#001c38", "secondary-fixed-dim": "#72d6d6", "surface-tint": "#466083", "on-tertiary-container": "#bc8700", "canvas-bg": "#F6F8FB", "status-libur-bg": "#F1F5F9", "error-container": "#ffdad6", "on-error": "#ffffff", "inverse-on-surface": "#eaf1ff", "gold-hover": "#C9911C", "status-tersedia-bg": "#E6F4F4", "text-muted": "#64748B", "on-secondary": "#ffffff", "on-background": "#0b1c30", "gold-subtle": "#FEF9EE", "surface-bright": "#f8f9ff", "on-tertiary-fixed": "#271900", "surface-dim": "#cbdbf5", "surface-container": "#e5eeff", "primary-fixed": "#d3e4ff", "border-subtle": "#E2E8F0", "inverse-primary": "#aec8f0", "surface-container-lowest": "#ffffff", "text-primary": "#0F172A", "primary-fixed-dim": "#aec8f0", "on-primary-fixed-variant": "#2d486a", "secondary": "#006a6a", "tertiary": "#1e1300", "surface-white": "#FFFFFF", "surface-container-highest": "#d3e4fe", "status-terisi": "#0B2A4A" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "gutter": "1.5rem", "space-xl": "2rem", "space-3xl": "4rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-2xl": "3rem", "margin-mobile": "1rem", "margin": "2rem", "space-md": "1rem" }, "fontFamily": { "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "code-badge": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600" }], "code-badge": ["12px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "800" }], "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-hero-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-white/95 backdrop-blur-md shadow-[0_1px_8px_rgba(11,42,74,0.06)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Logo STIP Jakarta" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WKJ7fBs2JmMjPqLdlD2nX41TZH0Wp8N4fBcbYI7nWYyUkgDCLeTyIkdJrzL9dejgU54xfmtZZ6tsRZa__Qw5Mjn_3PVDtSybqLJfP0mLpqaxk3x-kfGJtnjKVRbjFG4KjHLIjxvLOPmKi7fvzN5thjnw4qA07oWCdrH4pB2A438-Njg2S7aqHx4Z0S6xIQ7jzK2AFUjSMDKN-52-00EFC51p1kXXA1si5WyLEytqINcw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">SILT-STIP</span><span class="font-body-sm text-body-sm text-text-muted hidden sm:inline-block">Sistem Informasi Layanan Terpadu - STIP Jakarta</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-1 bg-canvas-bg rounded-lg" data-active-classes="bg-surface-container text-primary font-title-md"><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="beranda" href="#">Beranda</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="katalog-lab" href="#">Lab</a><a aria-current="page" class="px-space-md py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-title-md" data-path="jadwal-lab" href="#">Jadwal</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="pengumuman" href="#">Pengumuman</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center h-10 px-space-md rounded-lg font-label-md text-label-md text-status-terisi hover:bg-status-libur-bg transition-colors" data-path="login-pegawai" href="#">Masuk Pegawai</a><a class="inline-flex items-center justify-center h-10 px-space-lg rounded-lg bg-status-terisi text-on-primary font-label-md text-label-md hover:bg-navy-light transition-colors" data-path="login-taruna" href="#">Masuk Taruna</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-canvas-bg min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Banner & Breadcrumbs -->
+<section class="w-full bg-surface-white px-margin-mobile md:px-margin pt-space-lg pb-space-xl shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-text-muted">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+          Beranda
+        </a>
+<span class="text-text-muted/60">/</span>
+<span class="text-primary font-semibold">Jadwal</span>
+</nav>
+<!-- Page Title & Operational Status Headline -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-status-tersedia-bg text-secondary w-fit font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-status-tersedia animate-pulse"></span>
+            Sistem Pemantauan Terpadu 07.30 - 16.00 WIB
+          </div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            Jadwal Ketersediaan Lab &amp; Simulator
+          </h1>
+<p class="font-body-md text-body-md text-text-muted">
+            Pantau slot pemakaian 8 laboratorium &amp; simulator SPP STIP Jakarta secara real-time. Informasi terverifikasi tanpa memuat data pribadi pemohon untuk kepatuhan tata kelola maritim.
+          </p>
+</div>
+<!-- Quick Summary Mini-Metric Chips -->
+<div class="flex items-center gap-space-sm overflow-x-auto pb-1 lg:pb-0">
+<div class="px-space-md py-2.5 bg-canvas-bg rounded-xl flex items-center gap-3 shrink-0 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-status-tersedia-bg flex items-center justify-center text-status-tersedia">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Tersedia Saat Ini</span>
+<span class="font-headline-sm text-headline-sm text-primary">5 Lab Aktif</span>
+</div>
+</div>
+<div class="px-space-md py-2.5 bg-canvas-bg rounded-xl flex items-center gap-3 shrink-0 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-status-inoperative-bg flex items-center justify-center text-status-inoperative">
+<span class="material-symbols-outlined text-[20px]">build</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Perawatan Terjadwal</span>
+<span class="font-headline-sm text-headline-sm text-primary">1 Lab (ACSL)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Control Deck & Filters -->
+<section class="w-full px-margin-mobile md:px-margin py-space-md bg-canvas-bg sticky top-20 z-30 backdrop-blur-md bg-canvas-bg/95">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Toolbar Upper: Navigation & Views -->
+<div class="bg-surface-white p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<!-- Date Navigator -->
+<div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto">
+<div class="inline-flex items-center bg-canvas-bg rounded-lg p-1">
+<button class="w-9 h-9 rounded-md flex items-center justify-center text-primary hover:bg-surface-white transition-colors" id="btn-prev-week" title="Minggu Sebelumnya">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="px-space-md h-9 rounded-md font-label-md text-label-md text-primary hover:bg-surface-white transition-colors" id="btn-today">
+              Hari Ini
+            </button>
+<button class="w-9 h-9 rounded-md flex items-center justify-center text-primary hover:bg-surface-white transition-colors" id="btn-next-week" title="Minggu Berikutnya">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-2 px-space-md py-1.5 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-secondary text-[20px]">calendar_month</span>
+<span class="font-headline-sm text-headline-sm tracking-tight text-primary">Minggu ini: 12 – 16 Oktober 2026</span>
+</div>
+<div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-md font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span id="current-time-clock">10:15 WIB</span>
+</div>
+</div>
+<!-- View Switcher & Department Chips -->
+<div class="flex flex-wrap items-center gap-space-md w-full lg:w-auto justify-between lg:justify-end">
+<!-- Jurusan Filter Pills -->
+<div class="flex items-center gap-1 p-1 bg-canvas-bg rounded-lg">
+<button class="filter-jurusan active px-3 py-1.5 rounded-md font-label-md text-label-md bg-status-terisi text-on-primary transition-all">Semua</button>
+<button class="filter-jurusan px-3 py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all">Teknika</button>
+<button class="filter-jurusan px-3 py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all">Nautika</button>
+<button class="filter-jurusan px-3 py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all">KALK</button>
+</div>
+<!-- View Switcher Toggle -->
+<div class="inline-flex items-center bg-canvas-bg rounded-lg p-1">
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all">Hari</button>
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md bg-surface-white text-primary shadow-sm transition-all">Minggu</button>
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all">Bulan</button>
+</div>
+</div>
+</div>
+<!-- Lab Quick Selector Strip -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<span class="font-label-sm text-label-sm text-text-muted shrink-0 uppercase tracking-wider pl-1">Laboratorium:</span>
+<button class="lab-pill active shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-status-terisi text-on-primary flex items-center gap-1">
+<span>Semua (8)</span>
+</button>
+<button class="lab-pill shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-white text-on-surface hover:bg-surface-container-low shadow-sm flex items-center gap-1">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-1.5 py-0.5 rounded">CHL</span>
+<span>Cargo Handling</span>
+</button>
+<button class="lab-pill shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-white text-on-surface hover:bg-surface-container-low shadow-sm flex items-center gap-1">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-1.5 py-0.5 rounded">EEL</span>
+<span>Electro &amp; Electronics</span>
+</button>
+<button class="lab-pill shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-white text-on-surface hover:bg-surface-container-low shadow-sm flex items-center gap-1">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-1.5 py-0.5 rounded">EWS</span>
+<span>Electronic Workshop</span>
+</button>
+<button class="lab-pill shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-white text-on-surface hover:bg-surface-container-low shadow-sm flex items-center gap-1">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-1.5 py-0.5 rounded">MEL</span>
+<span>Marine Engineering</span>
+</button>
+<button class="lab-pill shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-white text-on-surface hover:bg-surface-container-low shadow-sm flex items-center gap-1">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-1.5 py-0.5 rounded">CBT</span>
+<span>Computer Based Test</span>
+</button>
+<button class="lab-pill shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-white text-on-surface hover:bg-surface-container-low shadow-sm flex items-center gap-1">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-1.5 py-0.5 rounded">ERCS</span>
+<span>Engine Room Simulator</span>
+</button>
+<button class="lab-pill shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-white text-on-surface hover:bg-surface-container-low shadow-sm flex items-center gap-1">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-1.5 py-0.5 rounded">LTL</span>
+<span>Liquid Thermal Lab</span>
+</button>
+<button class="lab-pill shrink-0 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-white text-status-inoperative hover:bg-status-inoperative-bg shadow-sm flex items-center gap-1">
+<span class="font-code-badge text-code-badge bg-status-inoperative text-on-primary px-1.5 py-0.5 rounded">ACSL</span>
+<span>Adv. Control Sys (Maint)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Schedule View Container -->
+<section class="w-full px-margin-mobile md:px-margin mt-space-md mb-space-3xl">
+<div class="max-w-7xl mx-auto">
+<!-- Grid Shell -->
+<div class="bg-surface-white rounded-2xl shadow-md overflow-hidden relative">
+<!-- Interactive Horizontal Canvas Container for Large Timetable -->
+<div class="overflow-x-auto w-full">
+<div class="min-w-[1100px] flex flex-col">
+<!-- Grid Header Row (Days of Week) -->
+<div class="grid grid-cols-12 bg-surface-container-low py-3 px-4 sticky top-0 z-20 shadow-sm">
+<div class="col-span-3 flex items-center gap-2">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Laboratorium / Simulator</span>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 text-center">
+<!-- Day Columns -->
+<div class="flex flex-col items-center py-1 rounded bg-surface-white/60">
+<span class="font-label-sm text-label-sm text-text-muted">Senin</span>
+<span class="font-headline-sm text-headline-sm text-primary">12 Okt</span>
+</div>
+<!-- Active Day Highlight -->
+<div class="flex flex-col items-center py-1 rounded bg-status-tersedia-bg text-secondary font-bold shadow-xs">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-tersedia"></span>
+<span class="font-label-sm text-label-sm text-secondary">Selasa (Hari Ini)</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-secondary">13 Okt</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded bg-surface-white/60">
+<span class="font-label-sm text-label-sm text-text-muted">Rabu</span>
+<span class="font-headline-sm text-headline-sm text-primary">14 Okt</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded bg-surface-white/60">
+<span class="font-label-sm text-label-sm text-text-muted">Kamis</span>
+<span class="font-headline-sm text-headline-sm text-primary">15 Okt</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded bg-surface-white/60">
+<span class="font-label-sm text-label-sm text-text-muted">Jumat</span>
+<span class="font-headline-sm text-headline-sm text-primary">16 Okt</span>
+</div>
+</div>
+</div>
+<!-- Operating Hours Indicator Bar -->
+<div class="grid grid-cols-12 bg-canvas-bg px-4 py-1.5 text-text-muted font-body-sm text-body-sm">
+<div class="col-span-3 font-label-sm text-label-sm uppercase tracking-wide">Fasilitas Kampus</div>
+<div class="col-span-9 grid grid-cols-5 text-center text-[11px] tracking-tight">
+<div>07.30 - 16.00 WIB</div>
+<div class="font-semibold text-secondary">07.30 - 16.00 WIB</div>
+<div>07.30 - 16.00 WIB</div>
+<div>07.30 - 16.00 WIB</div>
+<div>07.30 - 16.00 WIB</div>
+</div>
+</div>
+<!-- Real-Time Vertical Line Marker Positioned on Selasa (Tuesday) -->
+<div class="relative w-full">
+<!-- Grid Rows: Lab 1 (CHL) -->
+<div class="grid grid-cols-12 px-4 py-3 bg-surface-white hover:bg-canvas-bg/50 transition-colors group">
+<div class="col-span-3 pr-4 flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-2 py-0.5 rounded">CHL</span>
+<span class="font-title-md text-title-md text-primary font-bold">Cargo Handling Simulator</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-body-sm text-text-muted">Kapasitas: 24 Kursi</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary">Nautika</span>
+</div>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 items-center">
+<!-- Senin CHL -->
+<div class="flex flex-col gap-1.5">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 11.30 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Simulasi Penanganan Muatan Cair</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">D-IV Nautika Tk. III</span>
+</div>
+<button class="h-10 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('CHL', 'Cargo Handling Simulator', 'Senin, 12 Okt 2026', '13.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">13.00 - 16.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+<!-- Selasa CHL (Today) -->
+<div class="flex flex-col gap-1.5 relative bg-status-tersedia-bg/20 p-1 rounded-xl">
+<!-- Red Time Marker Line for 10:15 WIB -->
+<div class="absolute left-0 right-0 top-[42%] z-10 flex items-center pointer-events-none">
+<div class="w-2.5 h-2.5 rounded-full bg-status-inoperative -ml-1"></div>
+<div class="w-full h-[2px] bg-status-inoperative"></div>
+<span class="text-[9px] bg-status-inoperative text-on-primary font-bold px-1 rounded absolute right-1 -top-3">10:15 WIB</span>
+</div>
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">07.30 - 12.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Latihan Stabilitas Kapal Tangker</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Diklat Peningkatan ANT-II</span>
+</div>
+<button class="h-10 rounded-lg bg-surface-white hover:bg-status-tersedia-bg transition-all flex items-center justify-between px-2 text-status-tersedia shadow-xs" onclick="openSlotModal('CHL', 'Cargo Handling Simulator', 'Selasa, 13 Okt 2026', '13.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">13.00 - 16.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+<!-- Rabu CHL -->
+<div class="flex flex-col gap-1.5">
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('CHL', 'Cargo Handling Simulator', 'Rabu, 14 Okt 2026', '08.00 - 12.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">08.00 - 12.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">13.00 - 16.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Sistem Ballast Otomatis</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">D-IV Teknika Tk. IV</span>
+</div>
+</div>
+<!-- Kamis CHL -->
+<div class="flex flex-col gap-1.5">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 15.30 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Uji Kompetensi Kemaritiman BPSDM</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Reguler Mandiri</span>
+</div>
+</div>
+<!-- Jumat CHL -->
+<div class="flex flex-col gap-1.5">
+<button class="h-10 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('CHL', 'Cargo Handling Simulator', 'Jumat, 16 Okt 2026', '08.00 - 11.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">08.00 - 11.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<button class="h-10 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('CHL', 'Cargo Handling Simulator', 'Jumat, 16 Okt 2026', '13.30 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">13.30 - 16.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Grid Rows: Lab 2 (ERCS) -->
+<div class="grid grid-cols-12 px-4 py-3 bg-canvas-bg/30 hover:bg-canvas-bg transition-colors">
+<div class="col-span-3 pr-4 flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-2 py-0.5 rounded">ERCS</span>
+<span class="font-title-md text-title-md text-primary font-bold">Engine Room Simulator</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-body-sm text-text-muted">Kapasitas: 18 Kursi</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary">Teknika</span>
+</div>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 items-center">
+<!-- Senin ERCS -->
+<div class="flex flex-col gap-1.5">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 12.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Praktikum Watchkeeping D-IV Teknika</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Sesi Pagi Angkatan LX</span>
+</div>
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">13.00 - 16.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Troubleshooting Mesin Diesel Induk</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Sesi Siang</span>
+</div>
+</div>
+<!-- Selasa ERCS (Today) -->
+<div class="flex flex-col gap-1.5 relative bg-status-tersedia-bg/20 p-1 rounded-xl">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 11.30 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Simulasi Blackout Ship Recovery</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">D-IV Teknika Tk. II</span>
+</div>
+<button class="h-10 rounded-lg bg-surface-white hover:bg-status-tersedia-bg transition-all flex items-center justify-between px-2 text-status-tersedia shadow-xs" onclick="openSlotModal('ERCS', 'Engine Room Simulator', 'Selasa, 13 Okt 2026', '12.30 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">12.30 - 16.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+<!-- Rabu ERCS -->
+<div class="flex flex-col gap-1.5">
+<button class="h-20 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex flex-col justify-center items-center text-status-tersedia gap-1" onclick="openSlotModal('ERCS', 'Engine Room Simulator', 'Rabu, 14 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-md text-label-md font-bold">Slot Bebas Seharian</span>
+<span class="font-label-sm text-label-sm text-secondary">08.00 - 16.00 WIB</span>
+</button>
+</div>
+<!-- Kamis ERCS -->
+<div class="flex flex-col gap-1.5">
+<!-- Blackout / Exam Row Slot -->
+<div class="h-20 rounded-lg p-2.5 flex flex-col justify-center items-center text-center shadow-xs" style="background-image: repeating-linear-gradient(45deg, #F1F5F9, #F1F5F9 8px, #E2E8F0 8px, #E2E8F0 16px);">
+<span class="material-symbols-outlined text-status-libur text-[20px]">event_busy</span>
+<span class="font-label-sm text-label-sm font-bold text-status-libur uppercase">Libur / Ujian UKP</span>
+<span class="text-[10px] text-text-muted">Jadwal Ditutup Panitia</span>
+</div>
+</div>
+<!-- Jumat ERCS -->
+<div class="flex flex-col gap-1.5">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 11.30 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Audit Keandalan Aux Boiler</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Laboran &amp; Penguji</span>
+</div>
+<button class="h-10 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('ERCS', 'Engine Room Simulator', 'Jumat, 16 Okt 2026', '13.30 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">13.30 - 16.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Grid Rows: Lab 3 (EEL) -->
+<div class="grid grid-cols-12 px-4 py-3 bg-surface-white hover:bg-canvas-bg/50 transition-colors">
+<div class="col-span-3 pr-4 flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-2 py-0.5 rounded">EEL</span>
+<span class="font-title-md text-title-md text-primary font-bold">Electro &amp; Electronics Lab</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-body-sm text-text-muted">Kapasitas: 30 Kursi</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary">Teknika</span>
+</div>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 items-center">
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('EEL', 'Electro &amp; Electronics Lab', 'Senin, 12 Okt 2026', '08.00 - 12.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">08.00 - 12.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<div class="flex flex-col gap-1.5 bg-status-tersedia-bg/20 p-1 rounded-xl">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 16.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Rangkaian Otomasi Kapal &amp; PLC</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">D-IV Teknika Tk. III</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 12.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Kalibrasi Sensor Suhu &amp; Tekanan</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Sesi Dosen Pembimbing</span>
+</div>
+</div>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('EEL', 'Electro &amp; Electronics Lab', 'Kamis, 15 Okt 2026', '08.00 - 15.30 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Slot Bebas Seharian</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('EEL', 'Electro &amp; Electronics Lab', 'Jumat, 16 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Slot Siap Pakai</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+</div>
+<!-- Grid Rows: Lab 4 (EWS) -->
+<div class="grid grid-cols-12 px-4 py-3 bg-canvas-bg/30 hover:bg-canvas-bg transition-colors">
+<div class="col-span-3 pr-4 flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-2 py-0.5 rounded">EWS</span>
+<span class="font-title-md text-title-md text-primary font-bold">Electronic Workshop</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-body-sm text-text-muted">Kapasitas: 20 Kursi</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary">Teknika</span>
+</div>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 items-center">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 14.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Fabrikasi &amp; Soldering PCB Maritim</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Praktikum Mandiri</span>
+</div>
+<div class="flex flex-col gap-1.5 bg-status-tersedia-bg/20 p-1 rounded-xl">
+<button class="h-10 rounded-lg bg-surface-white hover:bg-status-tersedia-bg transition-all flex items-center justify-between px-2 text-status-tersedia shadow-xs" onclick="openSlotModal('EWS', 'Electronic Workshop', 'Selasa, 13 Okt 2026', '08.00 - 12.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">08.00 - 12.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<button class="h-10 rounded-lg bg-surface-white hover:bg-status-tersedia-bg transition-all flex items-center justify-between px-2 text-status-tersedia shadow-xs" onclick="openSlotModal('EWS', 'Electronic Workshop', 'Selasa, 13 Okt 2026', '13.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">13.00 - 16.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('EWS', 'Electronic Workshop', 'Rabu, 14 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Bebas Pakai</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">09.00 - 15.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Perbaikan Navigasi Gyrocompass</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Taruna D-IV</span>
+</div>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('EWS', 'Electronic Workshop', 'Jumat, 16 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Tersedia</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+</div>
+<!-- Grid Rows: Lab 5 (MEL) -->
+<div class="grid grid-cols-12 px-4 py-3 bg-surface-white hover:bg-canvas-bg/50 transition-colors">
+<div class="col-span-3 pr-4 flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-2 py-0.5 rounded">MEL</span>
+<span class="font-title-md text-title-md text-primary font-bold">Marine Engineering Lab</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-body-sm text-text-muted">Kapasitas: 28 Kursi</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary">Teknika</span>
+</div>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 items-center">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 11.30 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Overhaul Pompa Centrifugal Kapal</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Sesi Bengkel Taruna</span>
+</div>
+<div class="flex flex-col gap-1.5 bg-status-tersedia-bg/20 p-1 rounded-xl">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 15.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Sistem Pendingin Air Tawar Mesin Induk</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">D-IV Teknika Tk. II</span>
+</div>
+</div>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('MEL', 'Marine Engineering Lab', 'Rabu, 14 Okt 2026', '08.00 - 12.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">08.00 - 12.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('MEL', 'Marine Engineering Lab', 'Kamis, 15 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Bebas Pakai</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.30 - 11.30 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Inspeksi Alignment Poros Propeller</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Sesi Ujian Praktik</span>
+</div>
+</div>
+</div>
+<!-- Grid Rows: Lab 6 (CBT) -->
+<div class="grid grid-cols-12 px-4 py-3 bg-canvas-bg/30 hover:bg-canvas-bg transition-colors">
+<div class="col-span-3 pr-4 flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-2 py-0.5 rounded">CBT</span>
+<span class="font-title-md text-title-md text-primary font-bold">Computer Based Test Center</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-body-sm text-text-muted">Kapasitas: 60 Unit PC</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary">KALK / Umum</span>
+</div>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 items-center">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 16.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Try Out Nasional Keahlian Pelaut</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Pusat Asesmen STIP</span>
+</div>
+<div class="flex flex-col gap-1.5 bg-status-tersedia-bg/20 p-1 rounded-xl">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 12.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Simulasi Dokumen Ekspor Impor KALK</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">D-IV KALK Tk. III</span>
+</div>
+<button class="h-10 rounded-lg bg-surface-white hover:bg-status-tersedia-bg transition-all flex items-center justify-between px-2 text-status-tersedia shadow-xs" onclick="openSlotModal('CBT', 'Computer Based Test Center', 'Selasa, 13 Okt 2026', '13.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">13.00 - 16.00 WIB</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('CBT', 'Computer Based Test Center', 'Rabu, 14 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Bebas Pakai</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('CBT', 'Computer Based Test Center', 'Kamis, 15 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Bebas Pakai</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 11.30 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Ujian Sertifikasi Kepelabuhanan</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Sesi Sertifikasi Dosen</span>
+</div>
+</div>
+</div>
+<!-- Grid Rows: Lab 7 (LTL) -->
+<div class="grid grid-cols-12 px-4 py-3 bg-surface-white hover:bg-canvas-bg/50 transition-colors">
+<div class="col-span-3 pr-4 flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-2 py-0.5 rounded">LTL</span>
+<span class="font-title-md text-title-md text-primary font-bold">Liquid &amp; Thermal Lab</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-body-sm text-text-muted">Kapasitas: 16 Kursi</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary">Teknika</span>
+</div>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 items-center">
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('LTL', 'Liquid &amp; Thermal Lab', 'Senin, 12 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Slot Tersedia Penuh</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<div class="flex flex-col gap-1.5 bg-status-tersedia-bg/20 p-1 rounded-xl">
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">09.00 - 15.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Analisis Viskositas &amp; Bahan Bakar Kapal (MFO)</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">Penelitian Taruna &amp; Dosen</span>
+</div>
+</div>
+<div class="bg-status-terisi text-on-primary p-2 rounded-lg text-left shadow-sm">
+<span class="block font-label-sm text-[10px] text-surface-variant font-semibold">08.00 - 12.00 WIB</span>
+<p class="font-label-md text-label-md truncate font-semibold">Termodinamika Uap &amp; Kondensor</p>
+<span class="block text-[10px] text-on-primary/70 mt-0.5">D-IV Teknika Tk. II</span>
+</div>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('LTL', 'Liquid &amp; Thermal Lab', 'Kamis, 15 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Bebas Pakai</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+<button class="h-12 rounded-lg bg-status-tersedia-bg hover:bg-status-tersedia/20 transition-all flex items-center justify-between px-2 text-status-tersedia" onclick="openSlotModal('LTL', 'Liquid &amp; Thermal Lab', 'Jumat, 16 Okt 2026', '08.00 - 16.00 WIB')">
+<span class="font-label-sm text-label-sm font-semibold">Bebas Pakai</span>
+<span class="font-label-sm text-label-sm bg-status-tersedia text-on-primary px-1.5 py-0.5 rounded">Tersedia</span>
+</button>
+</div>
+</div>
+<!-- Grid Rows: Lab 8 (ACSL) - TIDAK OPERASIONAL (MAINTENANCE) -->
+<div class="grid grid-cols-12 px-4 py-3 bg-status-inoperative-bg/40 opacity-80">
+<div class="col-span-3 pr-4 flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<span class="font-code-badge text-code-badge bg-status-inoperative text-on-primary px-2 py-0.5 rounded">ACSL</span>
+<span class="font-title-md text-title-md text-status-inoperative font-bold line-through">Adv. Control System Lab</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-status-inoperative font-bold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                      Tidak Operasional
+                    </span>
+</div>
+</div>
+<div class="col-span-9 grid grid-cols-5 gap-2 items-center">
+<!-- Monday to Wednesday: Under Maintenance -->
+<div class="col-span-3 bg-surface-white/90 p-3 rounded-lg flex items-center justify-center gap-2 text-status-inoperative shadow-xs">
+<span class="material-symbols-outlined text-[20px]">handyman</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-bold">Pemeliharaan Perangkat Terjadwal</span>
+<span class="text-[11px] text-text-muted">12 - 14 Oktober 2026 (Upgrade Sensor Hidrolik)</span>
+</div>
+</div>
+<!-- Thursday & Friday: Ready Soon -->
+<div class="col-span-2 bg-canvas-bg/80 p-3 rounded-lg flex items-center justify-center gap-2 text-text-muted">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm font-semibold">Pemeriksaan Kalibrasi Akhir</span>
+<span class="text-[10px]">Dibuka Kembali 15 Okt 13.00 WIB</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /Real-Time Vertical Line Marker Positioned -->
+</div>
+</div>
+</div>
+<!-- Bottom Interactive Legend Bar -->
+<div class="mt-space-md p-space-md bg-surface-white rounded-xl shadow-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-lg">
+<span class="font-label-md text-label-md text-primary font-bold">Keterangan Status Slot:</span>
+<!-- Tersedia -->
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded bg-status-tersedia-bg border-2 border-status-tersedia"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Tersedia (Siap Diajukan)</span>
+</div>
+<!-- Terisi -->
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded bg-status-terisi"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Terisi (Sesi Pembelajaran/Praktikum)</span>
+</div>
+<!-- Libur / Blackout -->
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded" style="background-image: repeating-linear-gradient(45deg, #CBD5E1, #CBD5E1 3px, #F1F5F9 3px, #F1F5F9 6px);"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Libur Nasional / Ujian UKP</span>
+</div>
+<!-- Tidak Operasional -->
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded bg-status-inoperative"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Tidak Operasional (Perawatan)</span>
+</div>
+</div>
+<!-- Privacy & Compliance Statement Note -->
+<div class="flex items-center gap-1.5 text-text-muted font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+<span>Data identitas pemohon dilindungi sesuai SOP Transparansi Akademik STIP Jakarta.</span>
+</div>
+</div>
+<!-- Information & Guidelines Accordion Card -->
+<div class="mt-space-lg grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-lg bg-surface-white rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-status-terisi mb-1">
+<span class="material-symbols-outlined">rule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Aturan Pemakaian Slot</h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+            Permohonan penggunaan laboratorium simulator harus diajukan minimal H-3 sebelum pelaksanaan sesi praktikum atau pengujian.
+          </p>
+</div>
+<div class="p-space-lg bg-surface-white rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-status-terisi mb-1">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Verifikasi Dosen &amp; Laboran</h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+            Setiap pengajuan oleh Taruna wajib menyertakan Dosen Pembimbing Praktikum atau Kepala Ruang Simulator yang bersangkutan.
+          </p>
+</div>
+<div class="p-space-lg bg-surface-white rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-status-terisi mb-1">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Standar IMO STCW</h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+            Seluruh kurikulum simulasi anjungan dan kamar mesin mengacu pada IMO Model Course 7.02 &amp; 7.04 Kementerian Perhubungan RI.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Slot Modal Popover (Hidden by default, opened on slot click) -->
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-xs flex items-center justify-center p-4 hidden" id="slot-modal">
+<div class="bg-surface-white rounded-2xl max-w-md w-full p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-code-badge text-code-badge bg-status-terisi text-on-primary px-2 py-0.5 rounded" id="modal-lab-code">CHL</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Slot Tersedia</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold" id="modal-lab-name">Cargo Handling Simulator</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-canvas-bg hover:bg-surface-container flex items-center justify-center text-text-muted hover:text-primary transition-colors" onclick="closeSlotModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-space-md bg-canvas-bg rounded-xl flex flex-col gap-space-xs font-body-sm text-body-sm">
+<div class="flex justify-between py-1 border-b border-border-subtle">
+<span class="text-text-muted">Hari &amp; Tanggal:</span>
+<span class="font-semibold text-primary" id="modal-date">Selasa, 13 Okt 2026</span>
+</div>
+<div class="flex justify-between py-1 border-b border-border-subtle">
+<span class="text-text-muted">Rentang Jam Sesi:</span>
+<span class="font-semibold text-secondary" id="modal-time">10.00 – 11.30 WIB</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-text-muted">Kapasitas Maksimal:</span>
+<span class="font-semibold text-primary">24 Taruna / Sesi</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl text-text-muted font-body-sm text-body-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">info</span>
+<span>Untuk memesan slot ini, Anda wajib memiliki akun terdaftar sebagai Taruna aktif atau Pegawai/Dosen STIP Jakarta.</span>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<a class="w-full h-11 rounded-lg bg-tertiary-fixed-dim hover:bg-gold-hover text-status-terisi font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-2 shadow-xs transition-colors" data-path="login-taruna" href="#">
+<span>Ajukan Booking (Perlu Masuk)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="w-full h-10 rounded-lg bg-canvas-bg hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors" onclick="closeSlotModal()">
+          Tutup Pratinjau
+        </button>
+</div>
+</div>
+</div>
+<!-- Sticky Floating CTA Banner at Bottom -->
+<aside class="sticky bottom-0 left-0 right-0 z-40 bg-surface-white/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(11,42,74,0.08)] py-3 px-margin-mobile md:px-margin">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md text-center md:text-left">
+<div class="hidden sm:flex w-10 h-10 rounded-xl bg-status-terisi text-on-primary items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">vpn_key</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary font-bold">Ingin menggunakan fasilitas laboratorium?</span>
+<p class="font-body-sm text-body-sm text-text-muted">
+            Masuk dengan akun Pegawai atau Taruna untuk mengajukan permohonan booking resmi secara digital.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<a class="flex-1 md:flex-none h-11 px-space-lg rounded-lg bg-canvas-bg hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center transition-colors" data-path="login-pegawai" href="#">
+          Masuk Pegawai
+        </a>
+<a class="flex-1 md:flex-none h-11 px-space-xl rounded-lg bg-tertiary-fixed-dim hover:bg-gold-hover text-status-terisi font-title-md text-title-md font-bold flex items-center justify-center gap-2 shadow-sm transition-colors" data-path="login-taruna" href="#">
+<span>Masuk Taruna</span>
+<span class="material-symbols-outlined text-[18px]">login</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+<!-- Inline Interactive Script -->
+<script>
+  function openSlotModal(code, name, date, time) {
+    document.getElementById('modal-lab-code').innerText = code;
+    document.getElementById('modal-lab-name').innerText = name;
+    document.getElementById('modal-date').innerText = date;
+    document.getElementById('modal-time').innerText = time;
+    document.getElementById('slot-modal').classList.remove('hidden');
+  }
+
+  function closeSlotModal() {
+    document.getElementById('slot-modal').classList.add('hidden');
+  }
+
+  // Filter Pills micro-toggling
+  document.querySelectorAll('.filter-jurusan').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-jurusan').forEach(b => {
+        b.classList.remove('bg-status-terisi', 'text-on-primary');
+        b.classList.add('text-on-surface-variant');
+      });
+      this.classList.add('bg-status-terisi', 'text-on-primary');
+      this.classList.remove('text-on-surface-variant');
+    });
+  });
+
+  // Lab pills toggling
+  document.querySelectorAll('.lab-pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('.lab-pill').forEach(p => {
+        p.classList.remove('bg-status-terisi', 'text-on-primary');
+        if (!p.classList.contains('text-status-inoperative')) {
+          p.classList.add('bg-surface-white', 'text-on-surface');
+        }
+      });
+      this.classList.remove('bg-surface-white', 'text-on-surface');
+      this.classList.add('bg-status-terisi', 'text-on-primary');
+    });
+  });
+
+  // Close modal when tapping backdrop
+  const modal = document.getElementById('slot-modal');
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeSlotModal();
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-white mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter pb-space-xl"><div class="md:col-span-5 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-3 h-3 rounded-full bg-secondary"></div><span class="font-headline-sm text-headline-sm text-primary">SILT-STIP JAKARTA</span></div><p class="font-body-md text-body-md text-text-muted">Sistem Informasi Layanan Terpadu Sekolah Tinggi Ilmu Pelayaran (STIP) Jakarta. Pintu gerbang utama manajemen operasional laboratorium, simulator pelayaran, dan fasilitas akademis mariner tangguh Indonesia.</p><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-text-muted"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">location_on</span><span>Jl. Marunda Makmur, Cilincing, Jakarta Utara, DKI Jakarta 14150</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[18px]">mail</span><span>info@stipjakarta.ac.id</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[18px]">call</span><span>(021) 8899-0000 / Fax: (021) 8899-0001</span></div></div></div><div class="md:col-span-3 md:col-start-7 flex flex-col gap-space-md"><span class="font-title-md text-title-md text-primary font-bold">Layanan Laboratorium</span><div class="flex flex-col gap-space-sm"><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="katalog-lab" href="#">Katalog Lab &amp; Simulator</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="jadwal-lab" href="#">Jadwal Real-Time Lab</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="pengumuman" href="#">Pengumuman Perawatan</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="alur-peminjaman" href="#">Panduan Prosedur Booking</a></div></div><div class="md:col-span-3 flex flex-col gap-space-md"><span class="font-title-md text-title-md text-primary font-bold">Akses Pengguna</span><div class="flex flex-col gap-space-sm"><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="login-taruna" href="#">Portal Taruna</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="login-pegawai" href="#">Portal Pegawai &amp; Dosen</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="bantuan" href="#">Pusat Bantuan IT</a><a class="font-body-md text-body-md text-text-muted hover:text-secondary transition-colors" data-path="standar-layanan" href="#">Maklumat &amp; SOP Layanan</a></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-text-muted text-center sm:text-left">© 2026 STIP Jakarta. Hak Cipta Dilindungi.</p><div class="flex items-center gap-space-lg"><span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Kementerian Perhubungan Republik Indonesia</span></div></div></div></footer></body></html>

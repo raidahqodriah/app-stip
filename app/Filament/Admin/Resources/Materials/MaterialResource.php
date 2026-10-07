@@ -26,11 +26,24 @@ class MaterialResource extends Resource
 
     protected static ?string $cluster = LabCluster::class;
 
-    protected static ?string $navigationLabel = 'Bahan & Alat Praktik';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedWrenchScrewdriver;
 
     protected static ?int $navigationSort = 6;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.materials.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.materials.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.materials.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

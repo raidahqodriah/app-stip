@@ -28,13 +28,26 @@ class StudentResource extends Resource
 
     protected static ?string $cluster = MasterCluster::class;
 
-    protected static ?string $navigationLabel = 'Data Taruna';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUsers;
 
     protected static ?int $navigationSort = 3;
 
     protected static ?string $recordTitleAttribute = 'name';
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.students.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.students.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.students.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

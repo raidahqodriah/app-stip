@@ -28,11 +28,24 @@ class UnitResource extends Resource
 
     protected static ?string $cluster = MasterCluster::class;
 
-    protected static ?string $navigationLabel = 'Unit Kerja & Prodi';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleGroup;
 
     protected static ?int $navigationSort = 1;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.units.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.units.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.units.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

@@ -27,11 +27,24 @@ class EmployeeResource extends Resource
 
     protected static ?string $cluster = MasterCluster::class;
 
-    protected static ?string $navigationLabel = 'Data Pegawai & Dosen';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
 
     protected static ?int $navigationSort = 2;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.employees.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.employees.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.employees.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {
@@ -63,6 +76,19 @@ class EmployeeResource extends Resource
                 TextInput::make('phone')
                     ->label('No. Telepon / WhatsApp')
                     ->tel(),
+                Select::make('roles')
+                    ->label('Peran Akun (Roles)')
+                    ->relationship('roles', 'name', fn ($query) => $query->where('guard_name', 'employee'))
+                    ->multiple()
+                    ->preload()
+                    ->searchable(),
+                Select::make('permissions')
+                    ->label('Izin Khusus / Langsung (Direct Permissions)')
+                    ->helperText('Gunakan untuk partisi tugas petugas operasional atau wewenang persetujuan pejabat (Plh).')
+                    ->relationship('permissions', 'name', fn ($query) => $query->where('guard_name', 'employee'))
+                    ->multiple()
+                    ->searchable()
+                    ->preload(),
                 Toggle::make('is_active')
                     ->label('Status Akun Aktif')
                     ->default(true)
@@ -79,6 +105,17 @@ class EmployeeResource extends Resource
                     ->searchable(),
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('roles.name')
+                    ->label('Peran')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'admin' => 'danger',
+                        'leader' => 'info',
+                        'officer' => 'primary',
+                        'unit_admin' => 'warning',
+                        'teacher' => 'success',
+                        default => 'gray',
+                    }),
                 TextColumn::make('email')
                     ->label('Email address')
                     ->searchable(),

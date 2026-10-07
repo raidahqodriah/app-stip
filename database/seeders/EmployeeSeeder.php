@@ -143,5 +143,95 @@ class EmployeeSeeder extends Seeder
         if ($kaSpp && $unitSpp) {
             $unitSpp->update(['head_employee_id' => $kaSpp->id]);
         }
+
+        // Penugasan Role & Direct Permission (Spatie)
+        $roleAssignments = [
+            'admin@stipjakarta.ac.id' => [
+                'role' => 'admin',
+                'permissions' => [],
+            ],
+            'ketua@stipjakarta.ac.id' => [
+                'role' => 'leader',
+                'permissions' => ['residence.permit.approve'],
+            ],
+            'ka.spp@stipjakarta.ac.id' => [
+                'role' => 'leader',
+                'permissions' => ['lab.booking.approve'],
+            ],
+            'petugas.spp@stipjakarta.ac.id' => [
+                'role' => 'officer',
+                'permissions' => [
+                    'lab.schedule.view',
+                    'lab.booking.view-all',
+                    'lab.booking.verify',
+                    'lab.booking.create',
+                    'lab.booking.create-on-behalf',
+                    'lab.booking.update',
+                    'lab.booking.cancel',
+                    'lab.booking.realize',
+                    'lab.curriculum.manage',
+                    'lab.material.manage',
+                    'lab.blackout.manage',
+                    'lab.document.print',
+                    'lab.report.view',
+                    'core.room.manage',
+                ],
+            ],
+            'petugas.bmn@stipjakarta.ac.id' => [
+                'role' => 'officer',
+                'permissions' => [
+                    'bmn.item.view-all',
+                    'bmn.item.manage',
+                    'bmn.submission.view-all',
+                    'bmn.submission.process',
+                    'bmn.return.view-all',
+                    'bmn.return.process',
+                    'bmn.movement.view',
+                    'bmn.document.print',
+                    'bmn.report.view',
+                    'residence.master.manage',
+                    'residence.permit.view-all',
+                    'residence.permit.verify',
+                    'residence.document.print',
+                    'residence.report.view',
+                ],
+            ],
+            'petugas.perpus@stipjakarta.ac.id' => [
+                'role' => 'officer',
+                'permissions' => [
+                    'library.book.manage',
+                    'library.circulation.view-all',
+                    'library.circulation.process',
+                    'library.fine.confirm',
+                    'library.report.view',
+                ],
+            ],
+            'admin.teknika@stipjakarta.ac.id' => [
+                'role' => 'unit_admin',
+                'permissions' => [],
+            ],
+            'dosen.teknika@stipjakarta.ac.id' => [
+                'role' => 'teacher',
+                'permissions' => [],
+            ],
+            'dosen.nautika@stipjakarta.ac.id' => [
+                'role' => 'teacher',
+                'permissions' => [],
+            ],
+            'joko.prasetyo@stipjakarta.ac.id' => [
+                'role' => 'admin',
+                'permissions' => [],
+            ],
+        ];
+
+        foreach ($roleAssignments as $email => $assignment) {
+            $emp = Employee::where('email', $email)->first();
+            if ($emp) {
+                $emp->syncRoles([$assignment['role']]);
+                if (! empty($assignment['permissions'])) {
+                    $emp->givePermissionTo($assignment['permissions']);
+                }
+            }
+        }
     }
 }

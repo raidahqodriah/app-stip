@@ -19,11 +19,24 @@ class CirculationResource extends Resource
 {
     protected static ?string $model = Circulation::class;
 
-    protected static ?string $navigationLabel = 'Pinjaman Buku Saya';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClock;
 
     protected static ?string $recordTitleAttribute = 'transaction_code';
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.student_circulations.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.student_circulations.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.student_circulations.navigation_label');
+    }
 
     public static function canCreate(): bool
     {

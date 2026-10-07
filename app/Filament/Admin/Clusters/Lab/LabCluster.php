@@ -8,9 +8,17 @@ use Filament\Support\Icons\Heroicon;
 
 class LabCluster extends Cluster
 {
-    protected static ?string $navigationLabel = 'Layanan Lab / SPP';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedComputerDesktop;
 
     protected static ?int $navigationSort = 1;
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.clusters.lab.name');
+    }
+
+    public static function getClusterBreadcrumb(): ?string
+    {
+        return __('filament.clusters.lab.breadcrumb');
+    }
 }

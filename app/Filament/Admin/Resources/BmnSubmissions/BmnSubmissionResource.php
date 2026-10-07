@@ -40,11 +40,24 @@ class BmnSubmissionResource extends Resource
 
     protected static ?string $cluster = BmnCluster::class;
 
-    protected static ?string $navigationLabel = 'Pengajuan BMN Baru';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentPlus;
 
     protected static ?int $navigationSort = 2;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.bmn_submissions.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.bmn_submissions.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.bmn_submissions.navigation_label');
+    }
 
     protected static ?string $recordTitleAttribute = 'item_name';
 

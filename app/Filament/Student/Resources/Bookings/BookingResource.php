@@ -30,11 +30,24 @@ class BookingResource extends Resource
 {
     protected static ?string $model = Booking::class;
 
-    protected static ?string $navigationLabel = 'Booking Mandiri Lab';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCalendarDays;
 
     protected static ?string $recordTitleAttribute = 'booking_number';
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.student_bookings.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.student_bookings.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.student_bookings.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

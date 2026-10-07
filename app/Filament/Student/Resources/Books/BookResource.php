@@ -15,11 +15,24 @@ class BookResource extends Resource
 {
     protected static ?string $model = Book::class;
 
-    protected static ?string $navigationLabel = 'Katalog Perpustakaan';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBookOpen;
 
     protected static ?string $recordTitleAttribute = 'title';
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.student_books.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.student_books.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.student_books.navigation_label');
+    }
 
     public static function canCreate(): bool
     {

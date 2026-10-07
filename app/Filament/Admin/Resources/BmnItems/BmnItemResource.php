@@ -34,13 +34,26 @@ class BmnItemResource extends Resource
 
     protected static ?string $cluster = BmnCluster::class;
 
-    protected static ?string $navigationLabel = 'Rekap Inventaris BMN';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCube;
 
     protected static ?int $navigationSort = 1;
 
     protected static ?string $recordTitleAttribute = 'item_name';
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.bmn_items.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.bmn_items.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.bmn_items.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

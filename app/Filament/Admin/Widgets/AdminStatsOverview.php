@@ -28,23 +28,23 @@ class AdminStatsOverview extends BaseWidget
         $pendingSip = ResidencePermit::where('status', RequestStatus::Submitted)->count();
 
         return [
-            Stat::make('Booking Lab Menunggu Verifikasi', $pendingBookings)
-                ->description("{$approvedBookings} sesi telah disetujui")
+            Stat::make(__('filament.widgets.admin.pending_bookings'), $pendingBookings)
+                ->description(__('filament.widgets.admin.approved_bookings_desc', ['count' => $approvedBookings]))
                 ->descriptionIcon('heroicon-m-calendar')
                 ->color($pendingBookings > 0 ? 'warning' : 'success'),
 
-            Stat::make('Pengajuan BMN Baru', $pendingBmn)
-                ->description("Total {$totalBmn} unit BMN terdaftar")
+            Stat::make(__('filament.widgets.admin.pending_bmn'), $pendingBmn)
+                ->description(__('filament.widgets.admin.total_bmn_desc', ['count' => $totalBmn]))
                 ->descriptionIcon('heroicon-m-cube')
                 ->color($pendingBmn > 0 ? 'warning' : 'info'),
 
-            Stat::make('Buku Sedang Dipinjam', $activeLoans)
-                ->description('Transaksi sirkulasi aktif perpustakaan')
+            Stat::make(__('filament.widgets.admin.active_loans'), $activeLoans)
+                ->description(__('filament.widgets.admin.active_loans_desc'))
                 ->descriptionIcon('heroicon-m-book-open')
                 ->color('primary'),
 
-            Stat::make('Permohonan SIP Rumah Dinas', $pendingSip)
-                ->description('Menunggu pemeriksaan / persetujuan')
+            Stat::make(__('filament.widgets.admin.pending_sip'), $pendingSip)
+                ->description(__('filament.widgets.admin.pending_sip_desc'))
                 ->descriptionIcon('heroicon-m-home')
                 ->color($pendingSip > 0 ? 'warning' : 'gray'),
         ];

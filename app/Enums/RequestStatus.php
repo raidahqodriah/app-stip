@@ -2,7 +2,9 @@
 
 namespace App\Enums;
 
-enum RequestStatus: string
+use Filament\Support\Contracts\HasLabel;
+
+enum RequestStatus: string implements HasLabel
 {
     case Draft = 'draft';
     case Submitted = 'submitted';
@@ -28,20 +30,25 @@ enum RequestStatus: string
         ], true);
     }
 
-    public function label(): string
+    public function getLabel(): ?string
     {
         return match ($this) {
-            self::Draft => 'Draf',
-            self::Submitted => 'Menunggu Pemeriksaan',
-            self::RevisionRequested => 'Perlu Revisi',
-            self::Verified => 'Terverifikasi',
-            self::Approved => 'Disetujui',
-            self::InUse => 'Sedang Digunakan',
-            self::Completed => 'Selesai',
-            self::Rejected => 'Ditolak',
-            self::Cancelled => 'Dibatalkan',
-            self::NoShow => 'Tidak Hadir',
-            self::Expired => 'Kedaluwarsa',
+            self::Draft => __('enums.request_status.draft'),
+            self::Submitted => __('enums.request_status.submitted'),
+            self::RevisionRequested => __('enums.request_status.revision_requested'),
+            self::Verified => __('enums.request_status.verified'),
+            self::Approved => __('enums.request_status.approved'),
+            self::InUse => __('enums.request_status.in_use'),
+            self::Completed => __('enums.request_status.completed'),
+            self::Rejected => __('enums.request_status.rejected'),
+            self::Cancelled => __('enums.request_status.cancelled'),
+            self::NoShow => __('enums.request_status.no_show'),
+            self::Expired => __('enums.request_status.expired'),
         };
+    }
+
+    public function label(): string
+    {
+        return $this->getLabel() ?? $this->value;
     }
 }

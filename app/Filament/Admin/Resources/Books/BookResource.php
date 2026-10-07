@@ -24,11 +24,24 @@ class BookResource extends Resource
 
     protected static ?string $cluster = LibraryCluster::class;
 
-    protected static ?string $navigationLabel = 'Katalog Buku Perpustakaan';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBookOpen;
 
     protected static ?int $navigationSort = 1;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.books.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.books.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.books.navigation_label');
+    }
 
     public static function form(Schema $schema): Schema
     {

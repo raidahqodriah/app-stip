@@ -33,18 +33,18 @@ class StudentStatsOverview extends BaseWidget
             ->sum('fine_amount');
 
         return [
-            Stat::make('Pengajuan Booking Mandiri Saya', $myBookings)
-                ->description('Riwayat sesi latihan lab / simulator')
+            Stat::make(__('filament.widgets.student.my_bookings'), $myBookings)
+                ->description(__('filament.widgets.student.my_bookings_desc'))
                 ->descriptionIcon('heroicon-m-calendar-days')
                 ->color('info'),
 
-            Stat::make('Buku Sedang Dipinjam', $activeLoans)
-                ->description('Maksimal kuota 3 buku')
+            Stat::make(__('filament.widgets.student.active_loans'), $activeLoans)
+                ->description(__('filament.widgets.student.active_loans_desc'))
                 ->descriptionIcon('heroicon-m-book-open')
                 ->color($activeLoans >= 3 ? 'warning' : 'success'),
 
-            Stat::make('Tunggakan Denda', 'Rp '.number_format($unpaidFines, 0, ',', '.'))
-                ->description($unpaidFines > 0 ? 'Harap lunasi di loket perpustakaan' : 'Tidak ada tunggakan')
+            Stat::make(__('filament.widgets.student.unpaid_fines'), 'Rp '.number_format($unpaidFines, 0, ',', '.'))
+                ->description($unpaidFines > 0 ? __('filament.widgets.student.fines_desc_active') : __('filament.widgets.student.fines_desc_none'))
                 ->descriptionIcon('heroicon-m-banknotes')
                 ->color($unpaidFines > 0 ? 'danger' : 'success'),
         ];

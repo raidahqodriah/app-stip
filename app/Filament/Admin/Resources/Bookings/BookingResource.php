@@ -38,11 +38,24 @@ class BookingResource extends Resource
 
     protected static ?string $cluster = LabCluster::class;
 
-    protected static ?string $navigationLabel = 'Booking Lab & Simulator';
-
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCalendarDays;
 
     protected static ?int $navigationSort = 1;
+
+    public static function getModelLabel(): string
+    {
+        return __('filament.resources.bookings.label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament.resources.bookings.plural_label');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament.resources.bookings.navigation_label');
+    }
 
     protected static ?string $recordTitleAttribute = 'booking_number';
 
